@@ -2,14 +2,38 @@ package com.sim.app.restapi;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ResponseService {
 
-    //단일결과 처리 메서드
-    public <T> SingleResult<T> getSingleResult(T data){
+    // 단일건 결과 처리 메서드
+    public <T>SingleResult<T> getSingleResult(T data){
         SingleResult<T> result =new SingleResult<>();
         result.setData(data);
         setSuccessResult(result);
+        return result;
+    }
+
+    // 복수 결과 처리 메서드
+    public <T>ListResult<T> getListResult(List<T> list){
+        ListResult<T> result = new ListResult<>();
+        result.setList(list);
+        setSuccessResult(result);
+        return result;
+    }
+
+    //성공 결과만 처리
+    public CommonResult getSuccessResult(){
+        CommonResult result = new CommonResult();
+        setSuccessResult(result);
+        return result;
+    }
+
+    //실패 결과만 처리
+    public CommonResult getFailResult(){
+        CommonResult result = new CommonResult();
+        setFailResult(result);
         return result;
     }
 
@@ -18,5 +42,12 @@ public class ResponseService {
         result.setSuccess(true);
         result.setCode(CommonResponse.SUCCESS.getCode());
         result.setMsg(CommonResponse.SUCCESS.getMsg());
+    }
+
+    // API 요청 실패 시 응답 모델을 실패 데이터로 셋팅
+    private void setFailResult(CommonResult result){
+        result.setSuccess(false);
+        result.setCode(CommonResponse.FAIL.getCode());
+        result.setMsg(CommonResponse.FAIL.getMsg());
     }
 }
