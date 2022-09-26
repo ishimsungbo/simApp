@@ -19,7 +19,7 @@ public class SwaggerApiConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(swaggerInfo())  // API Docu 및 작성자 정보 매핑
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.sim.app"))
+                .apis(RequestHandlerSelectors.basePackage("com.sim.app")) //노출할 패키지만...
                 .paths(PathSelectors.any()) //Controller 패키지 전부?
                 .build()
                 .useDefaultResponseMessages(false);
