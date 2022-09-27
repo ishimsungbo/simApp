@@ -3,12 +3,14 @@ package com.sim.app.restapi.exceptiontest;
 import com.sim.app.restapi.ListResult;
 import com.sim.app.restapi.ResponseService;
 import com.sim.app.restapi.SingleResult;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Api(tags = {"97. Exception SetUp"})
 @RestController
 @RequestMapping("/exception")
 public class ExController {

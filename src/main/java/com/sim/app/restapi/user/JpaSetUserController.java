@@ -1,5 +1,6 @@
 package com.sim.app.restapi.user;
 
+import io.swagger.annotations.Api;
 import org.hibernate.query.criteria.internal.expression.function.CurrentDateFunction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,8 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
+@Api(tags = {"96. JPA SetUp"})
 @RestController
-public class TestUserController {
+public class JpaSetUserController {
 
     @Autowired
     private UserJpaRepo userJpaRepo;
