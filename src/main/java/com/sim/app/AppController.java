@@ -35,14 +35,6 @@ public class AppController {
 
     @GetMapping("/message01")
     public String message01(){
-        Locale.setDefault(Locale.ROOT);
-
-        ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasename("classpath:/message_resource/message");
-        messageSource.setDefaultEncoding("UTF-8");
-        messageSource.setCacheSeconds(3);
-        messageSource.clearCache();
-        messageSource.setConcurrentRefresh(true);
 
         String[] str = new String[]{"i18n"};
 
