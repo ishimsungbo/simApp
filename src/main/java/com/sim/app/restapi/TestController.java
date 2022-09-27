@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 
 @Api(tags = {"99. Etc Test"})  //스웨거
@@ -57,5 +60,8 @@ public class TestController {
     public String Test(@ApiParam(value = "이름" , required = true) @PathVariable String name){
         return "안녕하세요";
     }
+
+
+
 
 }
