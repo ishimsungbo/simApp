@@ -10,7 +10,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.*;
 
-//https://bgpark.tistory.com/160
+/**
+https://bgpark.tistory.com/160
+
+ https://dzone.com/articles/introduction-to-reactive-programming-2
+ https://projectreactor.io/docs/core/release/reference/#howtoReadMarbles
+ * */
+
 
 @Slf4j
 public class MyPublisher implements Publisher {
