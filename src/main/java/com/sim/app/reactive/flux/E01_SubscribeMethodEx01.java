@@ -6,6 +6,8 @@ import reactor.core.publisher.Flux;
 @Slf4j
 public class E01_SubscribeMethodEx01 {
 
+    //https://projectreactor.io/docs/core/release/reference/#howtoReadMarbles
+
     public static void main(String[] args) {
 
         log.info("1번 예제======================================");
