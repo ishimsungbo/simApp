@@ -5,20 +5,13 @@ import java.util.List;
 
 public class ReFlexClass {
 
-    public String mGetString(){
-        return "A";
+
+    public void aMethod(){
+        System.out.println(" A method");
     }
 
-    public int mGetInt(){
-        return 1;
-    }
-
-    public List<String> mList(){
-        return Arrays.asList("A","B","C");
-    }
-
-    public void mPrint(String inputStr){
-        System.out.println("Log : " + inputStr);
+    public void bMethod(){
+        System.out.println(" b method");
     }
 
 }

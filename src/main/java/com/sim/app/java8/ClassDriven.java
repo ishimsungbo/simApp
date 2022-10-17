@@ -1,5 +1,6 @@
 package com.sim.app.java8;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ClassDriven {
@@ -12,9 +13,14 @@ public class ClassDriven {
 
         for(int i=0; i < methods.length ;i++){
             System.out.println(" ==> " + methods[i].getName());
+            try {
+                methods[i].invoke(mClass);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
-        //System.out.println(methods[0].getDeclaringClass());
+
 
     }
 }
