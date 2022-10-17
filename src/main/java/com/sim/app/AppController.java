@@ -23,11 +23,12 @@ import java.util.Locale;
 @RestController
 public class AppController {
 
+    /**
     @GetMapping("/")
     public String index(){
         return "<h2>SimApp Spring boot Home Page</h2>";
     }
-
+*   */
     @GetMapping("/modeltest")
     public String modelTest(Model model){
         model.addAttribute("message","123123123213213213123");
