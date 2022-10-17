@@ -105,6 +105,25 @@
             <artifactId>jstl</artifactId>
         </dependency>
 
+        <!-- 몽고디비 설정 2022-10-17 시작-->
+        <!-- tag::mongodb[] -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.flapdoodle.embed</groupId>
+            <artifactId>de.flapdoodle.embed.mongo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+        </dependency>
+        <!-- end::mongodb[] -->
+        <!-- 몽고디비 설정 2022-10-17 종료-->
+
+
+
         <!-- ehcache 캐시설정 -->
         <!--
         <dependency>
