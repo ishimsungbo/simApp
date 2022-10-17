@@ -14,6 +14,7 @@ public class ClassDriven {
         for(int i=0; i < methods.length ;i++){
             System.out.println(" ==> " + methods[i].getName());
             try {
+                // invoke is some who calling...
                 methods[i].invoke(mClass);
             } catch (Exception e) {
                 e.printStackTrace();
