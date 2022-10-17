@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,12 @@ public class AppController {
     @GetMapping("/")
     public String index(){
         return "<h2>SimApp Spring boot Home Page</h2>";
+    }
+
+    @GetMapping("/modeltest")
+    public String modelTest(Model model){
+        model.addAttribute("message","123123123213213213123");
+        return "hi";
     }
 
 }
