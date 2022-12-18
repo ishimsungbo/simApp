@@ -1,4 +1,4 @@
-package com.sim.app.javaparttern;
+package com.sim.app.patterns.etc;
 
 import lombok.extern.slf4j.Slf4j;
 
